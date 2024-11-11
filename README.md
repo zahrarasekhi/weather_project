@@ -1,37 +1,52 @@
-# weather_project
-To create a function in Python that takes a city name as input and returns the temperature of that city, you can use the OpenWeatherMap API. You'll also need to use a .env file to store your API key securely. Below are the steps to achieve this:
 
-▎Step 1: Set Up Your Environment
+#WEATHER IN YOUR CITY
+
+The weather project is designed to provide real-time weather information for a specific location using Python. It leverages a weather API (such as OpenWeatherMap) to retrieve current weather data, including temperature, humidity, wind speed, and weather conditions. The project can be run in a console or as a simple web application.
+
+
+
+## API-KEY
+
+1. Sign up on [OpenWeatherMap](https://openweathermap.org/)
+
+2. Fill Out the Registration Form: Provide the required information, which typically includes:
+
+   • Your email address
+
+   • A password
+
+   • Any other required details
+
+3. Accept Terms and Conditions: Make sure to read and accept the terms of service and privacy policy.
+
+4. Verify Your Email: After submitting the registration form, check your email for a verification link. Click on that link to verify your account.
+
+5. Log In: Once your email is verified, return to the OpenWeatherMap website and log in using your credentials.
+
+6. Get Your API Key: After logging in, navigate to the API section of your account dashboard to find your API key, which you will use to access weather data.
+
+
+## Installation
 
 1. Install Required Libraries:
-   You'll need the requests library to make HTTP requests and python-dotenv to read the .env file. You can install them using pip:
 
+   You need the requests library to make HTTP requests and python-dotenv to read the .env file. Install them using pip:
+
+```bash
+  pip install requests python-dotenv
+```
+2. 2. Create a .env File:
+   In your project directory, create a file named .env and add your OpenWeatherMap API key:
    
-   pip install requests python-dotenv
    
+```bash
+     OPENWEATHER_API_KEY=your_api_key_here
 
-2. Create a .env File:
-   Create a file named .env in your project directory and add your OpenWeatherMap API key:
-
-   
-   OPENWEATHER_API_KEY=your_api_key_here
-   
-Step 2: Run The Program
-
-Run the weather.py file
+```
 
 
 
-▎Explanation:
-
-• Environment Variables: The load_dotenv() function loads environment variables from the .env file, allowing you to access your API key securely.
-
-• Function Definition: The get_city_temperature function takes a city name as an argument and constructs a request to the OpenWeatherMap API.
-
-• API Request: It sends a GET request with parameters including the city name, API key, and units (metric for Celsius).
-
-• Response Handling: If the request is successful (HTTP status code 200), it extracts and returns the temperature. If there's an error, it prints an error message.
-
-▎Usage:
+    
+## Running Tests
 
 Run the script, and it will prompt you to enter a city name. After entering the name, it will display the current temperature in that city. Make sure to replace your_api_key_here in the .env file with your actual OpenWeatherMap API key.
